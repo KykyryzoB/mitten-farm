@@ -1,0 +1,18 @@
+if workspace.Gift then
+	local Players = game:GetService("Players")
+local player = Players.LocalPlayer
+
+local teleportPosition = workspace.Gift.CFrame
+local originalPosition = player.Character.HumanoidRootPart.Position
+
+-- Телепортация к указанной позиции
+player.Character.HumanoidRootPart.CFrame = teleportPosition
+
+-- Ждем 2 секунды
+game:GetService("RunService").RenderStepped:wait()
+
+-- Телепортация обратно на исходную позицию
+player.Character.HumanoidRootPart.CFrame = CFrame.new(originalPosition)
+wait(1)
+
+end
